@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 const planetRouter = new PlanetRouter(data);
 app.use('/api/exoplanets', planetRouter);
 
-app.listen(3000, function () {
-  console.log('Started server');
+const port = process.env.PORT || 3000
+app.listen(port, function () { console.log(`Listening on port ${ port }`);
 });
